@@ -1,0 +1,49 @@
+{
+    "name": "victoravelar/fixer-exchange",
+    "type": "library",
+    "description": "API client to interact with Fixer.io",
+    "keywords": [
+        "VictorAvelar",
+        "fixer-exchange"
+    ],
+    "homepage": "https://github.com/VictorAvelar/fixer-exchange",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Hugo Avelar",
+            "email": "deltatuts@gmail.com",
+            "homepage": "https://github.com/VictorAvelar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=7.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VictorAvelar\\Fixer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VictorAvelar\\Fixer\\Tests": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
