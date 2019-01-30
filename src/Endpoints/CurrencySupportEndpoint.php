@@ -5,7 +5,7 @@ namespace VictorAvelar\Fixer\Endpoints;
 use VictorAvelar\Fixer\Contracts\ExecutorInterface;
 use VictorAvelar\Fixer\FixerHttpClient;
 
-class CurrencySupport extends AbstractEndpoint implements ExecutorInterface
+class CurrencySupportEndpoint extends AbstractEndpoint implements ExecutorInterface
 {
     /**
      * Method to perform requests to this endpoint.
@@ -20,7 +20,7 @@ class CurrencySupport extends AbstractEndpoint implements ExecutorInterface
     protected $path = "symbols";
 
     /**
-     * CurrencySupport constructor.
+     * CurrencySupportEndpoint constructor.
      *
      * @param FixerHttpClient $client
      */

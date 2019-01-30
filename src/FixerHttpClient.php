@@ -32,22 +32,20 @@ class FixerHttpClient extends Client
     private $clientKey;
 
     /**
-     * @var Client
-     */
-    private $client;
-
-    /**
      * FixerHttpClient constructor.
      *
      * @param string $clientKey
+     * @param array  $options
      */
-    public function __construct(string $clientKey)
+    public function __construct(string $clientKey, array $options = [])
     {
-        parent::__construct([
+        $opt = array_merge_recursive($options, [
             'base_uri' => self::BASE_URL,
             'timeout' => self::API_TIMEOUT,
             'allow_redirects' => false
         ]);
+
+        parent::__construct($opt);
 
         $this->clientKey = $clientKey;
     }

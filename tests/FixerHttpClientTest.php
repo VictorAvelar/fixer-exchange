@@ -26,4 +26,13 @@ class FixerHttpClientTest extends TestCase
     {
         $this->assertEquals('abcdefgh123456789', $this->client->getClientKey());
     }
+
+    public function testConstructorWorks()
+    {
+        $client = new FixerHttpClient('1212', ['headers' => ['Accept' => 'application/json']]);
+
+        $this->assertArrayHasKey('Accept', $client->getConfig('headers'));
+        $this->assertFalse($client->getConfig('allow_redirects'));
+        $this->assertEquals($client->getConfig('timeout'), 10);
+    }
 }
