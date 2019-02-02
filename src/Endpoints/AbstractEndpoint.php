@@ -33,39 +33,14 @@ abstract class AbstractEndpoint implements ExecutorInterface
     }
 
     /**
-     * Builds the correct URI to perform requests.
-     *
-     * @param array $params
-     *
-     * @return string
-     */
-    public function buildURI(array $params = []): string
-    {
-        return join('?', [$this->path, $this->attachQueryParams($params)]);
-    }
-
-    /**
      * {@inheritdoc}
      */
     public function execute()
     {
         return $this->client->request(
             self::REQUEST_METHOD,
-            $this->path
+            $this->path,
+            ['query' => [FixerHttpClient::KEY_NAME => $this->client->getClientKey()]]
         );
-    }
-
-    /**
-     * Attach query params to the request.
-     *
-     * @param array $params
-     *
-     * @return string
-     */
-    private function attachQueryParams(array $params = []): string
-    {
-        return http_build_query(array_merge($params, [
-            FixerHttpClient::KEY_NAME => $this->client->getClientKey()
-        ]));
     }
 }

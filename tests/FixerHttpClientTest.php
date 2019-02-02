@@ -2,7 +2,6 @@
 
 namespace VictorAvelar\Fixer\Tests;
 
-use phpDocumentor\Reflection\Types\Void_;
 use PHPUnit\Framework\TestCase;
 use VictorAvelar\Fixer\FixerHttpClient;
 

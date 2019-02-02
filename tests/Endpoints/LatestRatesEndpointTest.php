@@ -48,9 +48,4 @@ class LatestRatesEndpointTest extends TestCase
     {
         $this->assertEquals(200, $this->endpoint->execute()->getStatusCode());
     }
-
-    public function testBuildURI()
-    {
-        $this->assertEquals('latest?access_key='.$this->client->getClientKey(), $this->endpoint->buildURI());
-    }
 }

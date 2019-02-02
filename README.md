@@ -8,7 +8,8 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This package is an API wrapper to interact with [fixer.io](https://fixer.io) service.
+This package is an API wrapper to interact with [fixer.io](https://fixer.io) service, and provide basic currency 
+exchange.
 
 ## Install
 
@@ -37,7 +38,7 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](.github/CODE_OF_CONDUCT.md) for details.
 
 ## Security
 

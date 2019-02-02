@@ -14,7 +14,7 @@ class FixerHttpClient extends Client
     /**
      * API base URL.
      */
-    const BASE_URL = "https://data.fixer.io/api/";
+    const BASE_URL = "http://data.fixer.io/api/";
 
     /**
      * How to name the property containing the API key.
