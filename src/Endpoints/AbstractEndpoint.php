@@ -2,10 +2,16 @@
 
 namespace VictorAvelar\Fixer\Endpoints;
 
+use VictorAvelar\Fixer\Contracts\ExecutorInterface;
 use VictorAvelar\Fixer\FixerHttpClient;
 
-abstract class AbstractEndpoint
+abstract class AbstractEndpoint implements ExecutorInterface
 {
+    /**
+     * Execution method.
+     */
+    const REQUEST_METHOD = "GET";
+
     /**
      * @var FixerHttpClient
      */
@@ -36,6 +42,17 @@ abstract class AbstractEndpoint
     public function buildURI(array $params = []): string
     {
         return join('?', [$this->path, $this->attachQueryParams($params)]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function execute()
+    {
+        return $this->client->request(
+            self::REQUEST_METHOD,
+            $this->path
+        );
     }
 
     /**
