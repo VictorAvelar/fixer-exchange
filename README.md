@@ -74,6 +74,11 @@ $ composer test
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](.github/CODE_OF_CONDUCT.md) for details.
 
+## TODO
+- [ ] Implement Historical endpoint
+- [ ] Implement Currency exchange service
+- [ ] Implement converter to Fowler's money principle
+
 ## Security
 
 If you discover any security related issues, please email deltatuts@gmail.com instead of using the issue tracker.
