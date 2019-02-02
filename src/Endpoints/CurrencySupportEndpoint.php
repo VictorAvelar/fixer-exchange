@@ -2,10 +2,9 @@
 
 namespace VictorAvelar\Fixer\Endpoints;
 
-use VictorAvelar\Fixer\Contracts\ExecutorInterface;
 use VictorAvelar\Fixer\FixerHttpClient;
 
-class CurrencySupportEndpoint extends AbstractEndpoint implements ExecutorInterface
+class CurrencySupportEndpoint extends AbstractEndpoint
 {
     /**
      * Method to perform requests to this endpoint.
@@ -27,16 +26,5 @@ class CurrencySupportEndpoint extends AbstractEndpoint implements ExecutorInterf
     public function __construct(FixerHttpClient $client)
     {
         parent::__construct($client);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function execute()
-    {
-        return $this->client->request(
-            self::REQUEST_METHOD,
-            $this->path
-        );
     }
 }

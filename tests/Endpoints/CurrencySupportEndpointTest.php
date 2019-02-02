@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vavelar
- * Date: 2019-01-30
- * Time: 14:24
- */
 
 namespace VictorAvelar\Fixer\Tests\Endpoints;
 
