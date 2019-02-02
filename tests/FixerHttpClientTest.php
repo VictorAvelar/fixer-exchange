@@ -2,6 +2,7 @@
 
 namespace VictorAvelar\Fixer\Tests;
 
+use phpDocumentor\Reflection\Types\Void_;
 use PHPUnit\Framework\TestCase;
 use VictorAvelar\Fixer\FixerHttpClient;
 
@@ -12,9 +13,10 @@ class FixerHttpClientTest extends TestCase
      */
     protected $client;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->client = new FixerHttpClient('abcdefgh123456789');
+        parent::setUp();
     }
 
     public function testGetAPIVersion()
