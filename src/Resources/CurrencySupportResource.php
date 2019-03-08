@@ -1,25 +1,25 @@
 <?php
 
-namespace VictorAvelar\Fixer\Endpoints;
+namespace VictorAvelar\Fixer\Resources;
 
 use VictorAvelar\Fixer\FixerHttpClient;
 
 /**
- * Class LatestRatesEndpoint
+ * Class CurrencySupportResource
  *
- * @package VictorAvelar\Fixer\Endpoints
+ * @package VictorAvelar\Fixer\Resources
  */
-class LatestRatesEndpoint extends AbstractEndpoint
+class CurrencySupportResource extends AbstractFixerResource
 {
     /**
      * Endpoint path.
      *
      * @var string
      */
-    protected $path = "latest";
+    protected $path = "symbols";
 
     /**
-     * CurrencySupportEndpoint constructor.
+     * CurrencySupportResource constructor.
      *
      * @param FixerHttpClient $client
      */
