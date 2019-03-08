@@ -1,15 +1,15 @@
 <?php
 
-namespace VictorAvelar\Fixer\Endpoints;
+namespace VictorAvelar\Fixer\Resources;
 
 use VictorAvelar\Fixer\FixerHttpClient;
 
 /**
- * Class LatestRatesEndpoint
+ * Class LatestRatesResource
  *
  * @package VictorAvelar\Fixer\Endpoints
  */
-class LatestRatesEndpoint extends AbstractEndpoint
+class LatestRatesResource extends AbstractFixerResource
 {
     /**
      * Endpoint path.
@@ -19,7 +19,7 @@ class LatestRatesEndpoint extends AbstractEndpoint
     protected $path = "latest";
 
     /**
-     * CurrencySupportEndpoint constructor.
+     * CurrencySupportResource constructor.
      *
      * @param FixerHttpClient $client
      */

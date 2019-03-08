@@ -1,16 +1,16 @@
 <?php
 
-namespace VictorAvelar\Fixer\Endpoints;
+namespace VictorAvelar\Fixer\Resources;
 
 use VictorAvelar\Fixer\FixerHttpClient;
 
-class CurrencySupportEndpoint extends AbstractEndpoint
+/**
+ * Class CurrencySupportResource
+ *
+ * @package VictorAvelar\Fixer\Resources
+ */
+class CurrencySupportResource extends AbstractFixerResource
 {
-    /**
-     * Method to perform requests to this endpoint.
-     */
-    const REQUEST_METHOD = "GET";
-
     /**
      * Endpoint path.
      *
@@ -19,7 +19,7 @@ class CurrencySupportEndpoint extends AbstractEndpoint
     protected $path = "symbols";
 
     /**
-     * CurrencySupportEndpoint constructor.
+     * CurrencySupportResource constructor.
      *
      * @param FixerHttpClient $client
      */

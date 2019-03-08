@@ -21,21 +21,29 @@ $ composer require victoravelar/fixer-exchange
 
 ## Usage
 
+For a test run you can execute the [Examples](examples.php) file.
+
+**You will need to set up an API key, you can grab one for free at [fixer.io](https://fixer.io)**
+
+```bash
+$ php examples.php
+```
+
 ``` php
-<?php
+<?php // example.php
 
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
-use VictorAvelar\Fixer\Endpoints\CurrencySupportEndpoint;
-use VictorAvelar\Fixer\Endpoints\LatestRatesEndpoint;
 use VictorAvelar\Fixer\FixerHttpClient;
+use VictorAvelar\Fixer\Resources\CurrencySupportResource;
+use VictorAvelar\Fixer\Resources\LatestRatesResource;
 
 require 'vendor/autoload.php';
 
 // Get all supported symbols
 $client = new FixerHttpClient('YOUR_KEY_HERE');
 
-$endpoint = new CurrencySupportEndpoint($client);
+$endpoint = new CurrencySupportResource($client);
 
 try {
     $results = $endpoint->execute();
@@ -49,7 +57,7 @@ echo PHP_EOL;
 print_r($results->getBody()->getContents());
 
 // Get the latest exchange rates
-$endpoint = new LatestRatesEndpoint($client);
+$endpoint = new LatestRatesResource($client);
 
 try {
     $latest = $endpoint->execute();
@@ -58,6 +66,7 @@ try {
 }
 
 print_r($latest->getBody()->getContents());
+
 ```
 
 ## Change log

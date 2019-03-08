@@ -2,14 +2,22 @@
 
 namespace VictorAvelar\Fixer\Contracts;
 
+use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Message\ResponseInterface;
+
+/**
+ * Interface ExecutorInterface
+ *
+ * @package VictorAvelar\Fixer\Contracts
+ */
 interface ExecutorInterface
 {
     /**
      * Executes the API call.
      *
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface|mixed
      *
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws GuzzleException
      */
     public function execute();
 }
