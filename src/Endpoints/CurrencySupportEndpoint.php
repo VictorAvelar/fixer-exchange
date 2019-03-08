@@ -7,11 +7,6 @@ use VictorAvelar\Fixer\FixerHttpClient;
 class CurrencySupportEndpoint extends AbstractEndpoint
 {
     /**
-     * Method to perform requests to this endpoint.
-     */
-    const REQUEST_METHOD = "GET";
-
-    /**
      * Endpoint path.
      *
      * @var string
