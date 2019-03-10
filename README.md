@@ -8,8 +8,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This package is an API wrapper to interact with [fixer.io](https://fixer.io) service, and provide basic currency 
-exchange.
+This package is an API wrapper to interact with [fixer.io](https://fixer.io) free tier service.
 
 ## Install
 
